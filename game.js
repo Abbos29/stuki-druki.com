@@ -475,7 +475,7 @@
     shadow(p.x, 22);
     if (ult && t > ULT.cut) aura(p.x, p.y - 55, 80 + Math.sin(clock * 30) * 6);
     const anim = hugaAnim();
-    if (!(p.inv > 0 && anim !== 'hurt' && (clock * 20 | 0) % 2)) sprite('huga', anim, anim === 'walk' ? 10 : 2.5, p.x, p.y, p.face < 0);
+    if (ult || !(p.inv > 0 && anim !== 'hurt' && (clock * 20 | 0) % 2)) sprite('huga', anim, anim === 'walk' ? 10 : 2.5, p.x, p.y, p.face < 0);
 
     for (const s of shots) text(s.text, s.x, s.y, 10, '#ffe14d');
 
